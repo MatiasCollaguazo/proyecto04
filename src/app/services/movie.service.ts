@@ -1,24 +1,26 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { Movie } from '../interfaces/Movie';
+import { Movie } from '../interfaces/movie';
 import { openDB } from 'idb';
+
+
+const DB_NAME = 'MoviesDB-details';
+const STORE_NAME = 'movie-details';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MovieService {
-  private readonly DB_NAME = 'MoviesDB-details';
-  private readonly STORE_NAME = 'movie-details';
+
 
   constructor(private http: HttpClient) {}
 
   private async getDB() {
-    const storeName = this.STORE_NAME;
-    return openDB(this.DB_NAME, 1, {
+    return openDB(DB_NAME, 1, {
       upgrade(db) {
-        if (!db.objectStoreNames.contains(storeName)) {
-          db.createObjectStore(storeName, { keyPath: 'key' });
+        if (!db.objectStoreNames.contains(STORE_NAME)) {
+          db.createObjectStore(STORE_NAME, { keyPath: 'key' });
         }
       },
     });
@@ -29,7 +31,7 @@ export class MovieService {
 
     const db = await this.getDB();
     const key = `${movieId}_${language}`;
-    const cachedMovie = await db.get(this.STORE_NAME, key);
+    const cachedMovie = await db.get(STORE_NAME, key);
 
     if (cachedMovie) {
       return cachedMovie.data;
@@ -48,7 +50,7 @@ export class MovieService {
         return null;
       }
 
-      await db.put(this.STORE_NAME, { key, data: response });
+      await db.put(STORE_NAME, { key, data: response });
       return response;
     } catch (error) {
       console.error('Error fetching movie details: ', error);
