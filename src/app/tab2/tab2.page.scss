@@ -1,0 +1,57 @@
+.hero-section {
+    position: relative;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #000;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+  }
+  
+  .hero-content {
+    position: absolute;
+    color: #fff;
+    z-index: 1;
+  }
+  
+  .section {
+    padding: 10px;
+  }
+  
+  .section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  ion-slides {
+    height: 200px;
+  }
+  
+  .movie-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .movie-card img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .movie-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
