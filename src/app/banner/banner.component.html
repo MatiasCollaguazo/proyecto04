@@ -1,0 +1,20 @@
+<div class='header' *ngIf="movie && movieDetails && logoPath">
+  <img class="fondo" [src]="URL_IMAGE_BANNER+movie.backdrop_path" alt='movie.title' />
+  <app-navbar [logoBuscar]="true"></app-navbar>
+  <div class="cuerpoBanner">
+    <div class='contenedorLogo'>
+      <img class="logo-banner" [src]="URL_IMAGE_LOGO +logoPath.file_path" alt='movieDetails.title' />
+      <p class="overview">{{getSlicedOverview()}}</p>
+      <div class="botones">
+        <button>
+          <i class="fa-solid fa-play"></i>Reproducir
+        </button>
+
+        <button class="boton-info-banner">
+          <i class="fa-solid fa-circle-info"></i>Más Información
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>

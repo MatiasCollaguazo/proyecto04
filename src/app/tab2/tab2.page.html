@@ -1,55 +1,6 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>JustFlix</ion-title>
-    <ion-buttons slot="end">
-      <ion-button>
-        <ion-icon name="search"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<div class="contenedorHome" *ngIf="movieRandom">
+  <app-banner [movie]="movieRandom"></app-banner>
+  <div className="contenedorPeliculas">
 
-<ion-content [fullscreen]="true" class="home-page">
-  <!-- Hero Section -->
-  <div class="hero-section">
-    <img
-      class="hero-image"
-      src="https://m.media-amazon.com/images/I/51K8ouYrHeL._AC_UF894,1000_QL80_.jpg"
-      alt="Hero Image"
-    />
-    <div class="hero-content">
-      <h2>Featured Movie</h2>
-      <p>A quick summary of the featured movie...</p>
-      <div class="hero-buttons">
-        <ion-button color="primary">Play</ion-button>
-        <ion-button fill="outline">More Info</ion-button>
-      </div>
-    </div>
   </div>
-
-  <!-- Popular Movies Section -->
-  <div class="section">
-    <h3>Popular Movies</h3>
-    <ion-slides [options]="slideOpts">
-      <ion-slide *ngFor="let movie of popularMovies">
-        <div class="movie-card">
-          <img [src]="movie.imgUrl" [alt]="movie.title" />
-          <p>{{ movie.title }}</p>
-        </div>
-      </ion-slide>
-    </ion-slides>
-  </div>
-
-  <!-- Best Voted Section -->
-  <div class="section">
-    <h3>Best Voted Movies</h3>
-    <ion-slides [options]="slideOpts">
-      <ion-slide *ngFor="let movie of bestVotedMovies">
-        <div class="movie-card">
-          <img [src]="movie.imgUrl" [alt]="movie.title" />
-          <p>{{ movie.title }}</p>
-        </div>
-      </ion-slide>
-    </ion-slides>
-  </div>
-</ion-content>
+</div>
