@@ -9,12 +9,13 @@ import { fetchListMovies } from '../app.component';
 import { environment } from 'src/environments/environment';
 import { Movie } from '../interfaces/movie';
 import { BannerComponent } from '../banner/banner.component';
+import { CarousePeliculasComponent } from '../carouse-peliculas/carouse-peliculas.component';
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss'],
   standalone: true,
-  imports: [CommonModule, IonicModule, HttpClientModule,BannerComponent],
+  imports: [CommonModule, IonicModule, HttpClientModule,BannerComponent,CarousePeliculasComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class Tab2Page implements OnInit {
@@ -25,6 +26,8 @@ export class Tab2Page implements OnInit {
     loop: true, 
   };
 
+  fetchURLs:any=[]
+
   popularMovies: Movie[] = [];
   topRatedMovies: Movie[] = [];
   randomIndex:number=0
@@ -32,6 +35,7 @@ export class Tab2Page implements OnInit {
   constructor(private http: HttpClient) {}
 
   async ngOnInit() {
+    this.fetchURLs=fetchURLs
     this.popularMovies=await fetchListMovies(fetchURLs[0].popularMovies)
     this.topRatedMovies=await fetchListMovies(fetchURLs[0].topRatedMovies)
     this.randomIndex = Math.floor(Math.random() * this.popularMovies.length);

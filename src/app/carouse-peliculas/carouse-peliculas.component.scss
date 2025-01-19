@@ -1,0 +1,16 @@
+.imagenCarousel{
+    width: 200px;
+    height: 200px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tituloCarousel{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+}

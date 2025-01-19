@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { VideoModalComponent } from './video-modal.component';
+import { CarousePeliculasComponent } from './carouse-peliculas.component';
 
-describe('VideoModalComponent', () => {
-  let component: VideoModalComponent;
-  let fixture: ComponentFixture<VideoModalComponent>;
+describe('CarousePeliculasComponent', () => {
+  let component: CarousePeliculasComponent;
+  let fixture: ComponentFixture<CarousePeliculasComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ VideoModalComponent ],
+      declarations: [ CarousePeliculasComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(VideoModalComponent);
+    fixture = TestBed.createComponent(CarousePeliculasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

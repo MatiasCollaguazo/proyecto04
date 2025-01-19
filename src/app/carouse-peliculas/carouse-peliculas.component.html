@@ -1,0 +1,17 @@
+<div class="card">
+  <p class="tituloCarousel">{{title}}</p>
+  <p-carousel *ngIf="movies" [value]="movies" [numVisible]="4" [numScroll]="3" [circular]="true"
+    [responsiveOptions]="responsiveOptions" [showNavigators]="false" 
+    [showIndicators]="false">>
+    <ng-template pTemplate="item" let-movie class="custom-item">
+      <div class="border border-surface rounded-border m-2 p-4">
+        <div class="mb-4">
+          <div class="relative">
+            <img class="imagenCarousel" [src]="URL_IMAGE_POSTER + movie.poster_path" [alt]="movie.title" class="w-full rounded-border" />
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+
+</div>

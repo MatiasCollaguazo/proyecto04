@@ -1,6 +1,74 @@
 <div class="contenedorHome" *ngIf="movieRandom">
   <app-banner [movie]="movieRandom"></app-banner>
-  <div className="contenedorPeliculas">
+  <div class="contenedorPeliculas">
+    <div class="contenedorPeliculas">
+      <!-- Películas Populares -->
+      <app-carouse-peliculas [url]="fetchURLs[0].popularMovies" title="Peliculas Populares"></app-carouse-peliculas>
+
+      <!-- Películas Mejor Valoradas -->
+      <app-carouse-peliculas [url]="fetchURLs[0].topRatedMovies"
+        title="Peliculas Mejor Valoradas"></app-carouse-peliculas>
+
+      <!-- Películas Próximas -->
+      <app-carouse-peliculas [url]="fetchURLs[0].upcomingMovies" title="Peliculas Próximas"></app-carouse-peliculas>
+
+      <!-- Películas Descubiertas -->
+      <app-carouse-peliculas [url]="fetchURLs[0].discoverMovies" title="Peliculas Descubiertas"></app-carouse-peliculas>
+
+      <!-- Películas en Cartelera -->
+      <app-carouse-peliculas [url]="fetchURLs[0].nowPlaying" title="Peliculas en Cartelera"></app-carouse-peliculas>
+
+      <!-- Películas de Acción -->
+      <app-carouse-peliculas [url]="fetchURLs[0].actionMovies" title="Peliculas de Acción"></app-carouse-peliculas>
+
+      <!-- Películas de Aventura -->
+      <app-carouse-peliculas [url]="fetchURLs[0].adventureMovies" title="Peliculas de Aventura"></app-carouse-peliculas>
+
+      <!-- Películas de Animación -->
+      <app-carouse-peliculas [url]="fetchURLs[0].animationMovies"
+        title="Peliculas de Animación"></app-carouse-peliculas>
+
+      <!-- Películas de Comedia -->
+      <app-carouse-peliculas [url]="fetchURLs[0].comedyMovies" title="Peliculas de Comedia"></app-carouse-peliculas>
+
+      <!-- Películas de Crimen -->
+      <app-carouse-peliculas [url]="fetchURLs[0].crimeMovies" title="Peliculas de Crimen"></app-carouse-peliculas>
+
+      <!-- Películas Documentales -->
+      <app-carouse-peliculas [url]="fetchURLs[0].documentaryMovies"
+        title="Peliculas Documentales"></app-carouse-peliculas>
+
+      <!-- Películas de Drama -->
+      <app-carouse-peliculas [url]="fetchURLs[0].dramaMovies" title="Peliculas de Drama"></app-carouse-peliculas>
+
+      <!-- Películas Familiares -->
+      <app-carouse-peliculas [url]="fetchURLs[0].familyMovies" title="Peliculas Familiares"></app-carouse-peliculas>
+
+      <!-- Películas de Fantasía -->
+      <app-carouse-peliculas [url]="fetchURLs[0].fantasyMovies" title="Peliculas de Fantasía"></app-carouse-peliculas>
+
+      <!-- Películas de Historia -->
+      <app-carouse-peliculas [url]="fetchURLs[0].historyMovies" title="Peliculas de Historia"></app-carouse-peliculas>
+
+      <!-- Películas de Terror -->
+      <app-carouse-peliculas [url]="fetchURLs[0].horrorMovies" title="Peliculas de Terror"></app-carouse-peliculas>
+
+      <!-- Películas de Música -->
+      <app-carouse-peliculas [url]="fetchURLs[0].musicMovies" title="Peliculas de Música"></app-carouse-peliculas>
+
+      <!-- Películas de Misterio -->
+      <app-carouse-peliculas [url]="fetchURLs[0].mysteryMovies" title="Peliculas de Misterio"></app-carouse-peliculas>
+
+      <!-- Películas de Romance -->
+      <app-carouse-peliculas [url]="fetchURLs[0].romanceMovies" title="Peliculas de Romance"></app-carouse-peliculas>
+
+      <!-- Películas de Ciencia Ficción -->
+      <app-carouse-peliculas [url]="fetchURLs[0].scienceFictionMovies"
+        title="Peliculas de Ciencia Ficción"></app-carouse-peliculas>
+
+      <!-- Películas de Suspenso -->
+      <app-carouse-peliculas [url]="fetchURLs[0].thrillerMovies" title="Peliculas de Suspenso"></app-carouse-peliculas>
+    </div>
 
   </div>
 </div>

@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0px 45px;
+    padding: 5px 10px;
     font-size: 1.3rem;
     z-index: 6;
     color: #fff;
@@ -18,7 +18,7 @@
   
 
 .navbar img {
-    width: clamp(78px, 10vw, 150px);
+    width: 150px;
     height: auto;
 }
 
@@ -29,16 +29,9 @@
     gap: 60px;
 }
 
-.textInicio{
-    color: #fff;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: clamp(.7rem, 1.5vw, 1rem);
-    transition: .3s ease-in-out;
-}
-
 .lupa{
     font-size: 1.3rem;
+    padding-right: 30px;
     transition: .3s ease-in-out;
     cursor: pointer;
 }

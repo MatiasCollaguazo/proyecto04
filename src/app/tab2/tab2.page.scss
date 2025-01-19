@@ -8,8 +8,20 @@
     background: #000;
   }
 
+  .contenedorHome {
+    overflow-y: auto; /* Habilita el scroll vertical */
+  }
+
+  .contenedorPeliculas{
+    margin-top: -20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 10px;
+    background-color: #010622;
+  }
+
   .home{
-    background-color: black;
     height: 100vh;
   }
   
